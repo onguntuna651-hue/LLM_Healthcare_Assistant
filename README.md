@@ -1,44 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# MediNotes Pro – Healthcare Consultation Assistant
 
-## Getting Started
+MediNotes Pro is a professional healthcare consultation assistant designed to help medical professionals transform raw consultation notes into structured, actionable, and patient-friendly outputs using AI.
 
-First, run the development server:
+The application streamlines clinical documentation by generating medical summaries, follow-up actions, and patient email drafts — all from a single consultation form.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Structured Consultation Input**
+  - Patient name
+  - Date of visit (date picker)
+  - Free-form consultation notes
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **AI-Powered Outputs**
+  - Professional summaries for medical records
+  - Clear next steps and action items for clinicians
+  - Patient-friendly email drafts
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- **Real-Time Streaming**
+  - AI-generated content streams live as it’s created
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Secure & Authenticated**
+  - JWT-based authentication
+  - Subscription-gated access for premium users
 
-## Learn More
+- **Modern Healthcare UI**
+  - Clean, professional design
+  - Optimized for clinical workflows
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 🧠 How It Works
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. A clinician enters consultation details into a structured form.
+2. The backend validates the data and sends it to the AI model.
+3. The AI responds with three clearly defined sections:
+   - Summary of visit for medical records
+   - Next steps for the doctor
+   - Draft email written in patient-friendly language
+4. Results are streamed back to the frontend in real time.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+### Frontend
+- **Next.js**
+- **React**
+- **Tailwind CSS**
+- **Clerk Authentication**
+- **react-datepicker**
+- **Server-Sent Events (SSE)** for streaming responses
 
+### Backend
+- **FastAPI**
+- **Pydantic** for request validation
+- **OpenAI API**
+- **JWT authentication via Clerk**
 
+---
+![MediNotes Pro – Consultation Assistant](images/app.png)
 
-The agent is deployed to the production: [Production Link](https://saas-34z16zuo1-ongun-tunas-projects.vercel.app/)
+Link: https://saas-lawr2c73b-ongun-tunas-projects.vercel.app/
